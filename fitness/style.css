@@ -1,0 +1,634 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    text-align: center;
+}
+
+#signin-body {
+    background: black;
+    color: white;
+    width: 100%;
+    min-height: 100vh;
+    margin: auto;
+}
+
+.header {
+    font-size: 70px;
+    margin-bottom: 20px;
+    margin-top: 70px;
+    font-family: Agency FB, Arial;
+    color: white;    
+}
+
+#scale-logo {
+    max-width: 170px;
+    margin-top: 20px;
+}
+
+
+#login-button {
+    margin-top: 150px;
+    margin-bottom: 10px;
+    width: 50%;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+#login-button:hover {
+    cursor: pointer;
+}
+
+#signup-button {
+    width: 50%;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding-bottom: 5%;
+}
+
+#form-info {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.login-form-div {
+    display: none;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+#fix-pass-link {
+    margin-top: 1%;
+    color: white;
+    text-decoration: none;
+}
+
+#fix-pass-link:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.form-format {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-format input {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    height: 30px;
+}
+
+.help-text {
+    margin-top: 30px;
+}
+
+#submit-login-b {
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+#submit-login-b:hover {
+    cursor: pointer;
+}
+
+#main-body-div {
+    width: 100%;
+    margin: auto;
+    min-height: 100vh;
+    background: #e0e0e0;
+}
+
+
+.container-div {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10%;
+    padding: 1%;
+    background: #e0e0e0;
+    color: black;
+}
+
+
+
+.nav-link-div {
+    display: flex;
+    width: 100%;
+    background-color: darkgray;
+    border-bottom: 2px solid grey;
+    line-height: normal;
+}
+
+
+.scale-div {
+    display: flex;
+    width: 25%;
+    text-align: center;
+    justify-content: center;
+}
+
+.scale-div img {
+    max-width: 70px;
+    padding: 1%;
+}
+
+.showHere {
+    display: flex;
+    width: 100%;
+    background-color: darkgray;
+}
+
+
+#reset-subB {
+    height: 30px;
+    width: 30%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: black;
+    color: white;
+    font-weight: bold;
+}
+
+#reset-subB:hover {
+    cursor: pointer;
+}
+
+
+.uname {
+    font-weight: bold;
+}
+
+
+.body-stats {
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+}
+
+.spacer {
+    display: flex;
+    width: 50%;
+    border-bottom: 1px solid black;
+    margin: auto;
+    margin-bottom: 5px;
+    justify-content: center;
+}
+
+.spacer p {
+    height: 30px;
+    margin: auto;
+    width: 50%;
+}
+
+.spacer h3 {
+    width: 50%;
+    height: 30px;
+    margin: auto;
+}
+
+.cal {
+    display: flex;
+    border-bottom: 1px solid black;    
+    width: 50%;    
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 5px;  
+}
+
+.cal h3 {
+    display: flex;
+    width: 25%;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.li-stats {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+}
+
+.li-stats div[class='spacer'] {
+    width: 50%;
+}
+
+.spacer2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+    margin: auto;
+    justify-content: center;
+}
+
+.spacer2 div {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.sub-head {
+    height: 30px;
+}
+
+.stat-head {
+    height: 30px;
+    margin: auto;
+}
+
+.health-head {
+    margin: auto;
+}
+
+.health-form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+}
+
+.health-form input {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.spacer-div {
+    margin-top: 10px;
+}
+
+#second-form-div {
+    margin-bottom: 10px;
+}
+
+#form-update {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+#form-update input {
+    text-align: center;    
+    width: 75%;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+#form-update input[id='new-meal-subB'] {
+    width: 30%;
+    margin-top: 5%;
+    background: black;
+    color: white;
+    font-weight: bold;
+}
+
+
+.link-special {
+    display: flex;
+    width: 75%;
+    line-height: 20px;
+    justify-content: space-between;
+}
+
+.link-special h3 {
+    width: 25%;
+}
+
+
+#change-passB:hover {
+    cursor: pointer;
+}
+
+#ck-link {
+    color: blue;
+}
+
+
+.health-form {
+    padding-top: 10px;
+}
+
+#heightF, #ageF, #weightF {
+    width: 100%;
+}
+
+#display-form-button {
+    width: 25%;
+}
+
+#display-form-button:hover {
+    cursor: pointer;
+}
+
+
+
+.add-meal-bar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top:90vh;
+    left: 0;
+    height: 100px;
+    background: rgba(143,35,7,56);
+    text-align: center;
+    border-top: 2px solid black;
+}
+
+#add-formB {
+    width: 25%;
+}
+
+#add-formB:hover {
+    cursor: pointer;
+}
+
+
+#new-meal-subB {
+    height: 30px;
+    width: 30%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+.health-disclaim {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40%;
+    padding-bottom: 30px;
+    line-height: 5px;
+}
+
+.health-disclaim p {
+    font-size: 10px;
+}
+
+
+#hide-text {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.signup-body {
+    background: black;
+    color: white;
+    
+}
+
+#login-sendB {
+    color: white;
+    padding-bottom: 5%;
+}
+
+.header-sign {
+    color: white;
+    margin-bottom: 20%;
+    height: 20%;
+}
+
+.se-body {
+    background: black;
+    color: white;
+    
+}
+
+.change-pass-form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.change-pass-form input {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.change-pass-form input[id='submit-changePB'] {
+    width: 40%;
+    margin: auto;
+    margin-top: 30px;
+    height: 30px;
+}
+
+
+.fixp-body {
+    background: black;
+    color: white;
+}
+
+.reset-chead {
+    margin-bottom: 100px;
+}
+
+
+.reset-ptext {
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.forgot-pass-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+}
+
+.forgot-pass-form input {
+    text-align: center;
+    width: 70%;    
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.forgot-pass-form input[id='code-subB']{
+    width: 20%;
+    margin: auto;
+    height: 30px;
+    color: white;
+    background: grey;
+    border: 1px solid white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.forgot-pass-form input[id='code-subB']:hover {
+    cursor: pointer;
+}
+
+.sim-bodyD {
+    background: black;
+    color: white;
+}
+
+.sim-change-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.sim-change-div h1 {
+    margin-bottom: 100px;
+}
+
+.ez-cform {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+}
+
+.ez-cform input {
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.ez-cform input[id='ex-formB']{
+    width: 40%;
+    margin: auto;
+    height: 30px;
+}
+
+
+#logout-button:hover {
+    cursor: pointer;
+}
+
+.last-links {
+    display: none;
+    width: 100%;
+    background: grey;
+    position: absolute;
+}
+
+.last-links h3 {
+    width: 50%;
+}
+
+#account-divB:hover {
+    cursor: pointer;
+}
+
+
+.two-forms {
+    display: flex;
+}
+
+#reset-form-div {
+    display: none;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 30px;
+    background: #e0e0e0;
+    color: black;
+    position: absolute;
+    z-index: 2;
+}
+
+#close-reset-icon {
+    display: flex;
+    margin-top: 2%;
+    margin-right: 2%;
+    justify-content: center;
+    width: 10%;
+}
+
+#close-reset-icon:hover {
+    cursor: pointer;
+}
+
+
+.new-form {
+    display: none;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 30px;
+    background: #e0e0e0;
+    color: black;
+    position: absolute;
+}
+
+#close-icon {
+    display: flex;
+    float: left;
+    padding-left: 5%;
+    padding-top: 3%;
+    font-size: 20px;
+    color: black;
+    
+}
+
+#close-icon:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+@media screen and (max-width: 500px){
+    
+    .new-form {
+        width: 100%;
+    }
+    
+    
+    .scale-div {
+        display: none;
+    }
+    
+    .link-special {
+        width: 100%;
+    }
+    
+    .disclaim-text {
+        line-height: 10px;
+    }
+    
+    #scale-logo {
+        max-width: 20%;
+    }
+    
+    .header {
+        margin-bottom: 30px;
+    }
+    
+    #login-button {
+        margin-top: 50px;
+    }
+    
+    #up-formB {
+        width: 30%;
+        margin: auto;
+    }
+    
+    
+}
+
