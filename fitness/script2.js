@@ -14,6 +14,6 @@ function openSForm() {
 
 function goToSignUp() {
     
-    console.log('Sup!');
+    console.log('Going to sign up page!');
     
 }
