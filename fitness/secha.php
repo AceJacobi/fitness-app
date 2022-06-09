@@ -13,9 +13,9 @@
 <?php
 
     require_once 'log.php';
+    
     require_once 'functions.php';
-    
-    
+        
     
 if(isset($_GET['ema'])){
     
@@ -29,35 +29,39 @@ if(isset($_GET['ema'])){
     
     if($result->num_rows >= 1){   
     
-    $query = "DELETE from" {yourtablename} "where email='$email'";
-    
-    $result = $conn->query($query);
-    
-    if($result){
-        
-        echo '';
-        
-        
-        $query = "INSERT into" {yourtablename} "values('$email')";
-        
+        $query = "DELETE from" {yourtablename} "where email='$email'";
+
         $result = $conn->query($query);
-        
+    
         if($result){
+
             echo '';
-        }
-        
+
+            $query = "INSERT into" {yourtablename} "values('$email')";
+
+            $result = $conn->query($query);
+
+            if($result){
+                
+                echo '';
+                
+            }
+            else {
+                
+                die('Contact support for password issue.');
+                
+            }
+        }    
         else {
-            die('Contact support for password issue.');
+            
+            die('Please contact support!');
+            
         }
-        
-        
-    }    
-    else {
-        die('Please contact support!');
-    }
-    }
+        }
         else {
+            
             die('Page restricted!');
+            
         }
     }
      
@@ -70,52 +74,58 @@ if(isset($_GET['ema'])){
     if($result->num_rows >= 1){
         
     echo <<<_END
-    <div class='change-pform-div'> 
-    <h1 id='change-pass-head'>Change Password</h1>
-    <form class='change-pass-form'  action='secha.php?e=$email' method='post' onsubmit='samePass()'>
-    <input name='passO' type=password maxlength=12 required placeholder='New Password'>
-    <input name='passT' type=password maxlength=12 required placeholder='Reenter Password'>
-    <input id='submit-changePB' type='submit' value='Reset Password'>
-    <form>    
-    </div>
-    
-    
+        <div class='change-pform-div'> 
+        
+            <h1 id='change-pass-head'>Change Password</h1>
+            
+            <form class='change-pass-form'  action='secha.php?e=$email' method='post' onsubmit='samePass()'>
+            
+                <input name='passO' type=password maxlength=12 required placeholder='New Password'>
+                
+                <input name='passT' type=password maxlength=12 required placeholder='Reenter Password'>
+                
+                <input id='submit-changePB' type='submit' value='Reset Password'>
+                
+            <form>    
+            
+        </div>   
     _END;
         
         
         $query = "DELETE from" {yourtablename} "where email='$email'";
         
-        $result = $conn->query($query);
-        
+        $result = $conn->query($query);        
         
         if($result){
+            
             echo "<br>"."<br>".'One time use code destroyed.';
             
         }
         else {
+            
             die("Contact support!");
+            
         }
         
         
     }
     else {
+        
         die('Page already accessed!');
+        
     }
 }
     else {
         
-        if(isset($_POST['passO'])){
-        
+        if(isset($_POST['passO'])){        
         
         $pass = $_POST['passT'];
-        
-        
+                
         $email = sanitizeStrings($_GET['e']);
         
         $query = "select * from" {yourtablename} "where email='$email'";
         
-        $result = $conn->query($query);
-        
+        $result = $conn->query($query);        
         
         if($result){
             
@@ -124,12 +134,16 @@ if(isset($_GET['ema'])){
             $result = $conn->query($query);
             
             if($result){
+                
                 echo "Password successfully changed. Please sign in again."."<br>";
                 
                 echo "<a href='./index.php ' target='_self'>Login</a>";
+                
             }
             else {
+                
                 die("Contact support to change password.");
+                
             }
             
             
@@ -138,7 +152,9 @@ if(isset($_GET['ema'])){
         
         
     }else{
+            
         die('This page not accessible!');
+            
         }
     }   
    
