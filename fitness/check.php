@@ -13,10 +13,14 @@ if(count($_POST) > 0){
     $result = $conn->query($query);
     
     if($result->num_rows){
+        
         echo "<span>Username not available!</span>";
+        
     }
     else {
+        
         echo "<span>Username available!</span>";
+        
     }
     
     
