@@ -9,10 +9,15 @@ if(isset($_SESSION['cemail'])){
 $emailS = $_SESSION['cemail'];
 
 $cals = 0;
+    
 $pro = 0;
+    
 $fat = 0;
+    
 $sugar = 0;
+    
 $chol = 0;
+    
 
 
 if(isset($_POST['cals'])){
@@ -47,15 +52,23 @@ if($result->num_rows){
     $row = $result->fetch_array(MYSQLI_ASSOC);
     
     $oldCal = $row['calories']; 
+    
     $oldPro = $row['protein']; 
+    
     $oldFat = $row['fat']; 
+    
     $oldSug = $row['sugar']; 
+    
     $oldCho = $row['cholesterol'];
     
     $newCal = $oldCal - $cals;
+    
     $newPro = $oldPro - $pro;
+    
     $newFat = $oldFat - $fat;
+    
     $newSug = $oldSug - $sugar;
+    
     $newCho = $oldCho - $chol;
         
     $query = "update health set email='$emailS', calories='$newCal', protein='$newPro', fat='$newFat', sugar='$newSug', cholesterol='$newCho' where email='$emailS'";
@@ -66,10 +79,13 @@ if($result->num_rows){
     if($result){
                 
         echo 'Fields updated!';  
+        
         echo <<<_GO
-        <script>
-        window.location = './main.php';
-        </script>       
+            <script>
+            
+                window.location = './main.php';
+            
+            </script>       
         _GO;
             
             
